@@ -1,0 +1,29 @@
+\section{Описание}
+Предполагаем, что каждый из сортируемых элементов массива можно разбить на d разрядов. Тогда, начиная с самого младшего разряда, сортируем массив устойчивым алгоритмом по значению выбранного разряда, и так до самого старшего разряда. Время работы завист от выбранного устойчивого алгоритма сортировки. Если цифры(разряды) могут принимать значения до небольшого k, то лучший выбор - сортировка подсчётом. Для n чисел с d разрядами значениями от 0 до k-1 каждый проход занимает время $\Theta(n+k)$, d проходов - $\Theta(d(n+k))$.
+Как сказано в \cite{Kormen}: \enquote{Если d постоянно и $k = O(n)$, то поразрядная сортировка работает за линейное время}.
+
+\pagebreak
+
+\section{Консоль}
+\begin{alltt}
+
+[artem@IdeaPad solution]\$ make
+g++ -pedantic -Wall -std=c++11 -Werror -Wno-sign-compare -O2 -lm -c main.cpp
+g++ -pedantic -Wall -std=c++11 -Werror -Wno-sign-compare -O2 -lm -c Record.cpp
+g++ -pedantic -Wall -std=c++11 -Werror -Wno-sign-compare -O2 -lm -c Sort.cpp
+g++ -pedantic -Wall -std=c++11 -Werror -Wno-sign-compare -O2 -lm main.o Record.o Sort.o -o solution
+[artem@IdeaPad solution\$ python generator.py 10 | ./solution 
++55-5998-11391278	vvxzRboYGlIpGVCNKpMiZpVzBGzbwPdHDQCdmegJmjgj
++203-6225-54420352	uXlNHoUcNEazrYqHZDQLNlbyoqHFhVevsdkBmHf
++242-6957-77482245	CgaTseqCAWQAilyigyHYJhwvpSsfUlteiTuhxmmpRw
++249-8790-13660628	ltKniLmPIWnordqhYvYPlpTXUNh
++476-6224-75326021	uoqlFGghcytKDaqQdWvfNdeQqcFG
++494-2252-79673470	gArtaSpOIfzAtcrSWNRJbbiHVmw
++682-5864-72861170	wZxPLDcQdRYkzQUbSxNymdzZlluAXszPUZsJBBH
++694-5623-51338066	rgGXLzsWxFUdyWVDHsxFiHDjitrlZvgSgWVGFhP
++734-3124-9591930	uzlecHxdnPwtjmXjiYmmHinvAjHuYgpOMruFSKQMfAUZhZlzMs
++927-2540-75979719	XzoZudMopyQkvUGxUkrZGpYRvQvbINFEbTo
+
+
+\end{alltt}
+\pagebreak

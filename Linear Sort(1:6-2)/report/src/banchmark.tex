@@ -1,0 +1,32 @@
+\section{Тест производительности}
+
+Тест производительности представляет из себя сравнение времени работы поразрядной сортировки с уже существующей устойчивой сортировкой из STL std::stable\_sort.
+Тест состоит из 100000 строк ввода.
+
+\begin{alltt}
+
+[artem@IdeaPad solution]\$ ./wrapper.sh 
+g++ -pedantic -Wall -std=c++11 -Werror -Wno-sign-compare -O2 -lm -c main.cpp
+g++ -pedantic -Wall -std=c++11 -Werror -Wno-sign-compare -O2 -lm -c Record.cpp
+g++ -pedantic -Wall -std=c++11 -Werror -Wno-sign-compare -O2 -lm -c Sort.cpp
+g++ -pedantic -Wall -std=c++11 -Werror -Wno-sign-compare -O2 -lm main.o Record.o Sort.o -o solution
+Built main program
+g++ -std=c++11 -c benchmark.cpp
+g++ -std=c++11 -c ../Record.cpp
+g++ -std=c++11 -c ../Sort.cpp
+g++ -std=c++11 benchmark.o Record.o Sort.o -o benchmark
+Built benchmark
+Test generation completed
+Count of lines is 100000
+Radix sort time: 480216us
+STL stable sort time: 543419us 
+Sorting completed
+Comparison completed
+rm -f benchmark.o Record.o Sort.o *.txt benchmark
+rm -f main.o Record.o Sort.o *.txt solution
+
+\end{alltt}
+
+Как видно, поразрядная сортировка выиграла у обычной устойчивой, но не намного из-за достаточно малого n.
+
+\pagebreak
