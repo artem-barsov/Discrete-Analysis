@@ -1,0 +1,40 @@
+\section{Тест производительности}
+
+Тест производительности представляет из себя сравнение результатов и времени работы разработанной библиотеки для длинной арифметики с уже существующей реализацией на Python.
+
+Тест состоит из 1000 наборов пар чисел и операции для вычисления.
+
+\begin{alltt}
+
+[artem@IdeaPad solution]\$ ./wrapper.sh 
+Generating tests... OK.
+Testing python BigInteger... 
+real	0m1.327s
+user	0m1.309s
+sys	0m0.017s
+OK.
+Testing my C++ BigInteger... 
+real	0m8.690s
+user	0m8.668s
+sys	0m0.010s
+OK.
+Comparing output... OK.
+Start benchmark? [Y/n]
+
+Number of tests: 1000
+Oper.   Python  My C++
++       2.59    0.34
+-        2.58    0.33
+*       3.09    1.78
+/       2.45    2.58
+^       49.99   332.76
+<        0.86    0.28
+>        0.86    0.32
+=       0.77    0.27
+
+
+\end{alltt}
+
+Как видно, реализованная библиотека показала лучшую производительность почти во всех случаях.
+
+\pagebreak
