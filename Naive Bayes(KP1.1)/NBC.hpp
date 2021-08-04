@@ -1,14 +1,19 @@
 #include "Data.hpp"
 #include <unordered_map>
-#include <unordered_set>
+#include <map>
 #include <cmath>
 #include <array>
+#include <queue>
 #include <functional>
 
 class NBC {
 private:
     Stats stats;
+    const double Laplace_smoothing = 1;
 public:
-    void fit(std::vector<std::reference_wrapper<const Feature>>& X, const Feature& y);
+    NBC() = default;
+    NBC(Stats&&);
     Stats& get_stats();
+    void fit(std::vector<std::reference_wrapper<const Feature>>& X, const Feature& y);
+    Feature predict(std::vector<std::reference_wrapper<const Feature>>& X);
 };

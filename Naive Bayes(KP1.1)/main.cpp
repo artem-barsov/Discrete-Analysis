@@ -18,7 +18,7 @@ int main(int argc, char const *argv[]) {
             std::cerr << "Unable to open " << argv[3] << '\n';
             return 0;
         }
-        const auto& [x1, x2, y] = get_dataset(fin);
+        const auto& [x1, x2, y] = get_trainset(fin);
         fin.close();
         std::vector X = {std::ref(x1), std::ref(x2)};
         NBC nbc;
@@ -38,6 +38,24 @@ int main(int argc, char const *argv[]) {
             std::cerr << "Unable to open " << argv[3] << '\n';
             return 0;
         }
-        auto model_stats = load_stats(fin);
+        NBC nbc(load_stats(fin));
+        fin.close();
+
+        fin.open(argv[5], std::ios::in);
+        if (!fin.is_open()) {
+            std::cerr << "Unable to open " << argv[5] << '\n';
+            return 0;
+        }
+        const auto& [x1, x2, _] = get_testset(fin);
+        fin.close();
+        std::vector X = {std::ref(x1), std::ref(x2)};
+        Feature y = nbc.predict(X);
+        std::ofstream fout(argv[7], std::ios::out);
+        if (!fout.is_open()) {
+            std::cerr << "Unable to open " << argv[7] << '\n';
+            return 0;
+        }
+        save_feature(fout, y);
+        fout.close();
     }
 }
