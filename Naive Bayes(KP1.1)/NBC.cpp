@@ -37,23 +37,23 @@ Feature NBC::predict(std::vector<std::reference_wrapper<const Feature>>& X) {
     Feature y(X[0].get().size());
     for (int doc = 0; doc < X[0].get().size(); doc++) {
         for (int feat = 0; feat < X.size(); feat++) {
-            double max_prob = -std::numeric_limits<double>::infinity();
-            std::string best_tag;
+            std::set<std::pair<double, std::string>, std::greater<std::pair<double, std::string> > > bests;
             for (auto& [tag, info] : stats.tags_info) {
                 double log_prob = log(info.class_count) - log(stats.docs_count);
                 for (auto& word : X[feat].get()[doc]) {
                     log_prob += log(info.word_count[feat][word] + Laplace_smoothing)
                         - log(Laplace_smoothing * stats.dict_size[feat] + info.words_total[feat]);
                 }
-                if (max_prob < log_prob) {
-                    max_prob = log_prob;
-                    best_tag = tag;
-                }
+                bests.insert({log_prob, tag});
+                if (bests.size() > maxClasses_per_feat)
+                    bests.erase(std::prev(bests.end()));
             }
-            bool has = false;
-            for (auto& predicted_tag : y[doc])
-                has |= (predicted_tag == best_tag);
-            if (!has) y[doc].push_back(best_tag);
+            for (auto& [_,best_tag] : bests) {
+                bool has = false;
+                for (auto& predicted_tag : y[doc])
+                    has |= (predicted_tag == best_tag);
+                if (!has) y[doc].push_back(best_tag);
+            }
         }
     }
     return std::move(y);

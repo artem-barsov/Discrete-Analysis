@@ -3,13 +3,14 @@
 #include <map>
 #include <cmath>
 #include <array>
-#include <queue>
+#include <set>
 #include <functional>
 
 class NBC {
 private:
     Stats stats;
-    const double Laplace_smoothing = 1;
+    const int Laplace_smoothing = 1;
+    const int maxClasses_per_feat = 2;
 public:
     NBC() = default;
     NBC(Stats&&);
