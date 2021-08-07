@@ -1,20 +1,21 @@
 #include "Data.hpp"
 #include <unordered_map>
-#include <map>
-#include <cmath>
-#include <array>
-#include <set>
 #include <functional>
+#include <cmath>
+#include <set>
 
 class NBC {
 private:
     Stats stats;
+    // сглаживание Лапласа для слов, отсутствующих в обучающей выборке
     const int Laplace_smoothing = 1;
+    // количество подобранных классов для каждой фичи
     const int maxClasses_per_feat = 2;
 public:
     NBC() = default;
-    NBC(Stats&&);
-    Stats& get_stats();
-    void fit(std::vector<std::reference_wrapper<const Feature>>& X, const Feature& y);
-    Feature predict(std::vector<std::reference_wrapper<const Feature>>& X);
+    NBC(const Stats&&);
+    const Stats& get_stats() const;
+    void fit(const Feature&, const Feature&);
+    template <size_t SZ>
+    const Feature predict(const std::array<std::reference_wrapper<const Feature>, SZ>&) const;
 };

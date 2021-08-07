@@ -1,7 +1,4 @@
 #include <iostream>
-#include <fstream>
-#include <functional>
-#include <array>
 #include "Data.hpp"
 #include "NBC.hpp"
 
@@ -18,9 +15,8 @@ int main(int argc, char const *argv[]) {
             std::cerr << "Unable to open " << argv[3] << '\n';
             return 0;
         }
-        const auto& [x1, x2, y] = get_trainset(fin);
+        const auto& [_, X, y] = get_trainset(fin);
         fin.close();
-        std::vector X = {std::ref(x1), std::ref(x2)};
         NBC nbc;
         nbc.fit(X, y);
         std::ofstream fout(argv[5], std::ios::out);
@@ -28,8 +24,7 @@ int main(int argc, char const *argv[]) {
             std::cerr << "Unable to open " << argv[3] << '\n';
             return 0;
         }
-        auto model_stats = nbc.get_stats();
-        save_stats(fout, model_stats);
+        save_stats(fout, nbc.get_stats());
         fout.close();
     }
     else if (std::string(argv[1]) == "classify") {
@@ -40,7 +35,6 @@ int main(int argc, char const *argv[]) {
         }
         NBC nbc(load_stats(fin));
         fin.close();
-
         fin.open(argv[5], std::ios::in);
         if (!fin.is_open()) {
             std::cerr << "Unable to open " << argv[5] << '\n';
@@ -48,7 +42,7 @@ int main(int argc, char const *argv[]) {
         }
         const auto& [x1, x2, _] = get_testset(fin);
         fin.close();
-        std::vector X = {std::ref(x1), std::ref(x2)};
+        std::array X = {std::ref(x1), std::ref(x2)};
         Feature y = nbc.predict(X);
         std::ofstream fout(argv[7], std::ios::out);
         if (!fout.is_open()) {
