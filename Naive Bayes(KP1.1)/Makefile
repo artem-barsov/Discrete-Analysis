@@ -1,13 +1,12 @@
 CXX = g++
-CXXFLAGS = -std=c++20
-# CXXFLAGS = -pedantic -Wall -std=c++11 -Werror -Wno-sign-compare -O2 -lm
+CXXFLAGS = -std=c++17
 OBJ = main.o Data.o NBC.o
 OUT = NBC
 
 all: $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(OUT)
 
-main.o: main.cpp Data.hpp
+main.o: main.cpp Data.hpp NBC.hpp
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
 Data.o: Data.hpp Data.cpp
