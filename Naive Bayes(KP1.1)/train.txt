@@ -1,40 +1,177 @@
-1
-машина,авто
-Создание машины времени
-Как создать машину времени из подручных средств?
-2
-солнце,растения
-выращивание деревьев в домашних условиях
-Как вырастить дерево без горшка у себя дома,
-чтобы утром смотреть на него?
-3
-health
-healthy lifestyle
-not to eat too much is not enough to lose weight.
-do not neglect exercise.
-eat to lose weight, you should not eat much.
-2
-politics
-conflict,news
-russia is trying to invade ukraine
-syria is the main issue, obama says
-4
-белье,помада,бульбулятор
-Сбор вещей в Сербию
-В Сербии много ресторанов и там разрешена торговля кораблями.
-Местные изготавливают карандаши этого вещества в виде помады,
-только покупают ее для переплавки в сосуды. Через нагревание выделяют
-пар. Это признаная проблема. Поставки продолжаются в комплекте с нижним бельем.
-2
-молоток
-Лучший инструмент для забивания
-Проблема когда вылазит гвоздь на стене.
-Тогда люди применяют молоток.
+8
+religion,philosophy,history
+Indian religion Buddhism
+Buddhism is an Indian religion based on a series of original teachings
+attributed to Gautama Buddha. It originated in ancient India as a Sramana
+tradition sometime between the 6th and 4th centuries BCE, spreading through much
+of Asia. It is the world's fourth-largest religion with over 520 million
+followers, or over 7% of the global population, known as Buddhists. Buddhism
+encompasses a variety of traditions, beliefs and spiritual practices largely
+based on the Buddha's teachings (born Siddhartha Gautama in the 5th or 4th
+century BCE) and resulting interpreted philosophies.
+7
+sport,history
+Karate martial art
+Karate is developed in the Ryukyu Kingdom. It developed from the indigenous
+Ryukyuan martial arts under the influence of Kung Fu, particularly Fujian White
+Crane. Karate is now predominantly a striking art using punching, kicking, knee
+strikes, elbow strikes and open-hand techniques such as knife-hands, spear-hands
+and palm-heel strikes. Historically, and in some modern styles, grappling,
+throws, joint locks, restraints and vital-point strikes are also taught. A
+karate practitioner is called a karateka.
+6
+software,testing,tools
+Open-source general-purpose test-automation framework Karate
+Karate can script calls to HTTP end-points and assert that the JSON or XML
+responses are as expected. Karate also has support for service-virtualization
+where it can bring up "mock" (or stub) servers which can substitute for
+web-services that need to participate in an integration-test. Karate's
+capabilities include being able to run tests in parallel, HTML reports and
+compatibility with Continuous Integration tools.
+8
+geography,regions
+Peninsula along the northern coast of the Black Sea in Eastern Europe.
+Crimea is almost entirely surrounded by both the Black Sea and the smaller Sea
+of Azov to the northeast. Crimea is located south of Kherson Oblast in Ukraine,
+to which it is connected by the Isthmus of Perekop, and lies west of Krasnodar
+Krai in Russia, from which it is separated by the Strait of Kerch though linked
+by the Crimean Bridge since 2018. The Arabat Spit is located to its northeast, a
+narrow strip of land that separates a system of lagoons named Sivash from the
+Sea of Azov. To the peninsula's west, across the Black Sea, lies Romania, and to
+its south, Turkey.
 5
-жвачка,столб
-Происшествие в зиму
-Все знают что нельзя лизать столбы в мороз...
-Как то в Челябинске я увидел кое-кого.
-Он стоял боком ко мне, носом упевшись в столб, и языком тянулся к столбу.
-Я хотел остановить наглеца, но когда подошел, увидел что у столба приляпана
-нечто. Оказалась эта была жвачка. Сладкая. Опошленный человек производил мороженное.
+politics,military,regions
+Russian Federation annexed The Crimean Peninsula, north of the Black Sea in Eastern Europe
+Crimea was annexed between February and March 2014 and since then has been
+administered as two Russian federal subjects—the Republic of Crimea and the
+federal city of Sevastopol. The annexation from Ukraine followed a Russian
+military intervention in Crimea that took place in the aftermath of the 2014
+Ukrainian revolution and was part of wider 2014 pro-Russian unrest in Ukraine.
+13
+biography,history
+Early life of Russian president, Vladimir Putin
+Vladimir Vladimirovich Putin was born on 7 October 1952 in Leningrad, Russian
+SFSR, Soviet Union (now Saint Petersburg, Russia), the youngest of three
+children of Vladimir Spiridonovich Putin (1911–1999) and Maria Ivanovna Putina.
+Spiridon Putin, Vladimir Putin's grandfather, was a cook to Vladimir Lenin.
+Putin's birth was preceded by the deaths of two brothers, Viktor and Albert,
+born in the mid-1930s. Albert died in infancy and Viktor died of diphtheria
+during the Siege of Leningrad by Nazi Germany's forces in World War II. Putin's
+mother was a factory worker and his father was a conscript in the Soviet Navy,
+serving in the submarine fleet in the early 1930s. Early in World War II, his
+father served in the destruction battalion of the NKVD. Later, he was
+transferred to the regular army and was severely wounded in 1942. Putin's
+maternal grandmother was killed by the German occupiers of Tver region in 1941,
+and his maternal uncles disappeared on the Eastern Front during World War II.
+10
+biography,history
+Short life description of Belorussian president Lukashenko
+Lukashenko was born on 31 August 1954 in the settlement of Kopys in the Vitebsk
+Oblast of the Belorussian Soviet Socialist Republic. His maternal grandfather,
+Trokhym Ivanovich Lukashenko, had been born in the Sumy Oblast of Ukraine near
+Shostka (today village of Sobycheve). Lukashenko grew up without a father in his
+childhood, leading him to be taunted by his schoolmates for having an unmarried
+mother. Due to this, the origin of his patronymic Grigorevich is unknown and
+there are various rumors about who Lukashenko's father might have been with the
+most popular version being that he was a Roma passing through the region. His
+mother, Ekaterina Trofimovna Lukashenko (1924–2015), gave birth to another son,
+Alexander's older brother who died.
+7
+food,dish,cooking
+Rice or wheat dish pilaf
+Pilaf's, or pilau, recipe usually involves cooking in stock or broth, adding
+spices, and other ingredients such as vegetables or meat, and employing some
+technique for achieving cooked grains that do not adhere. Some cooks prefer to
+use basmati because it is easier to prepare a pilaf where the grains stay
+"light, fluffy and separate" with this type of rice. However, other types of
+long-grain rice are also used. The rice is rinsed thoroughly before use to
+remove the starch. Pilaf can be cooked in water or stock.
+8
+philosophy,food
+Philosophy of food finds its basis on the idea that food is a mirror.
+You may have heard the saying ‘we are what we eat.’ Well, there is more to say
+regarding this relation. Eating mirrors the making of a self, that is, the array
+of decisions and circumstances that bring us to eat the way we do. In them, we
+can see reflected a detailed and comprehensive image of ourselves. Philosophy of
+food reflects on the ethical, political, social, artistic, identity-defining
+aspects of food. It spurs from the challenge to more actively pondering our
+diets and eating habits so as to understand who we are in a deeper, more
+authentic way.
+11
+religion,politics,philosophy
+The relation between religion and politics continues to be an important theme in political philosophy
+despite the emergent consensus (both among political theorists and in practical
+political contexts, such as the United Nations) on the right to freedom of
+conscience and on the need for some sort of separation between church and state.
+One reason for the importance of this topic is that religions often make strong
+claims on people’s allegiance, and universal religions make these claims on all
+people, rather than just a particular community. For example, Islam has
+traditionally held that all people owe obedience to Allah’s will. Thus, it is
+probably inevitable that religious commitments will sometimes come into conflict
+with the demands of politics. But religious beliefs and practices also
+potentially support politics in many ways. The extent and form of this support
+is as important to political philosophers as is the possibility for conflict.
+9
+geography,science
+Geography is a systematic study of the Universe and its features.
+Traditionally, geography has been associated with cartography and place names.
+Although many geographers are trained in toponymy and cartology, this is not
+their main preoccupation. Geographers study the space and the temporal database
+distribution of phenomena, processes, and features as well as the interaction of
+humans and their environment. Because space and place affect a variety of
+topics, such as economics, health, climate, plants and animals, geography is
+highly interdisciplinary. The interdisciplinary nature of the geographical
+approach depends on an attentiveness to the relationship between physical and
+human phenomena and its spatial patterns.
+11
+sport
+Generally categorized as a modern Japanese martial art Judo
+Judo has since evolved into an Olympic event. The sport was created in 1882 by
+Jigoro Kano as a physical, mental, and moral pedagogy in Japan. With its origins
+coming from jujutsu, judo's most prominent feature is its competitive element,
+where the objective is to either throw or take down the opponent to the ground,
+immobilize or otherwise subdue the opponent with a pin, or force the opponent to
+submit with a joint lock or a choke. Strikes and thrusts by hands and feet as
+well as weapons defences are a part of judo, but only in pre-arranged forms
+(kata) and are not allowed in judo competition or free practice (randori). It
+was also referred to as Kanō Jiu-Jitsu until the introduction to the Olympic
+event. A judo practitioner is called a "judoka", and the judo uniform is called
+"judogi".
+6
+cooking,science
+Why does food brown when cooked?
+Browning, or the Maillard reaction, creates flavor and changes the color of
+food. Maillard reactions generally only begin to occur above 285°F (140°C).
+Until the Maillard reaction occurs meat will have less flavor. Shown above are
+two identical dishes cooked (left) below (140°C) and right at much higher
+temperatures. Both caramelization and the maillard reaction only occur on the
+right producing the noticeable brown color.
+10
+science,military
+What can be used to establish enemy capability as part of technical intelligence?
+Military science is the study of military processes, institutions, and behavior,
+along with the study of warfare, and the theory and application of organized
+coercive force. It is mainly focused on theory, method, and practice of
+producing military capability in a manner consistent with national defense
+policy. Military science serves to identify the strategic, political, economic,
+psychological, social, operational, technological, and tactical elements
+necessary to sustain relative advantage of military force; and to increase the
+likelihood and favorable outcomes of victory in peace or during a war. Military
+scientists include theorists, researchers, experimental scientists, applied
+scientists, designers, engineers, test technicians, and other military personnel
+13
+software,tools
+Programming on Linux
+Most programming languages support Linux either directly or through third-party
+community based ports. The original development tools used for building both
+Linux applications and operating system programs are found within the GNU
+toolchain, which includes the GNU Compiler Collection (GCC) and the GNU Build
+System. Amongst others, GCC provides compilers for Ada, C, C++, Go and Fortran.
+Many programming languages have a cross-platform reference implementation that
+supports Linux, for example PHP, Perl, Ruby, Python, Java, Go, Rust and Haskell.
+First released in 2003, the LLVM project provides an alternative cross-platform
+open-source compiler for many languages. Proprietary compilers for Linux include
+the Intel C++ Compiler, Sun Studio, and IBM XL C/C++ Compiler. BASIC in the form
+of Visual Basic is supported in such forms as Gambas, FreeBASIC, and XBasic, and
+in terms of terminal programming or QuickBASIC or Turbo BASIC programming in the
+form of QB64.
