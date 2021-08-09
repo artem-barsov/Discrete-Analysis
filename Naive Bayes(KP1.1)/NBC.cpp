@@ -48,4 +48,4 @@ const Feature NBC::predict(const std::array<std::reference_wrapper<const Feature
     return std::move(y);
 }
 
-template const Feature NBC::predict<2>(const std::array<std::reference_wrapper<const Feature>, 2>& X) const;
+template const Feature NBC::predict(const std::array<std::reference_wrapper<const Feature>, 2>& X) const;

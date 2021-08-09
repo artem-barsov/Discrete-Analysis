@@ -85,7 +85,7 @@ const Stats load_stats(std::ifstream& fin) {
     Stats ret;
     int tags_count;
     fin >> ret.docs_count >> tags_count >> ret.dict_size;
-    for (int i = 0; i < tags_count; i++) {
+    while (tags_count--) {
         std::string tag;
         fin >> tag >> ret.tags_info[tag].class_count >> ret.tags_info[tag].words_total;
         int words_left = ret.tags_info[tag].words_total;
