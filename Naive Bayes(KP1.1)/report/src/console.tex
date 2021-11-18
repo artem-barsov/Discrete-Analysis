@@ -1,0 +1,23 @@
+\section{Консоль}
+\begin{alltt}
+
+[artem@IdeaPad Naive Bayes(KP1.1)]\$ make
+g++ -std=c++17 -c main.cpp
+g++ -std=c++17 -c Data.cpp
+g++ -std=c++17 -c NBC.cpp
+g++ -std=c++17 main.o Data.o NBC.o -o NBC
+[artem@IdeaPad Naive Bayes(KP1.1)]\$ ls
+Data.cpp  Data.hpp  Data.o  main.cpp  main.o  Makefile  NBC  NBC.cpp  NBC.hpp  NBC.o  predict.txt  stats.txt  test.txt  train.txt
+[artem@IdeaPad Naive Bayes(KP1.1)]\$ ./NBC learn --input train.txt --output stats.txt 
+[artem@IdeaPad Naive Bayes(KP1.1)]\$ ./NBC classify --stats stats.txt --input test.txt --output predict.txt
+[artem@IdeaPad Naive Bayes(KP1.1)]\$ cat predict.txt 
+geography,  regions,  food
+tools,  software,  philosophy,  politics
+philosophy,  science,  geography
+science,  geography,  philosophy
+sport,  history
+regions,  geography,  food,  cooking
+philosophy,  history
+
+\end{alltt}
+\pagebreak

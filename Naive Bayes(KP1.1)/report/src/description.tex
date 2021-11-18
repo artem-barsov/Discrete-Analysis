@@ -1,0 +1,66 @@
+\newgeometry{top=2cm, bottom=3cm}
+
+\section{Описание программы}
+
+\textbf{Файлы} \\
+
+\begin{tabular}{|l|m{0.8\textwidth}|}
+    \hline
+    Файл & Описание \\
+    \hline\hline
+    main.cpp & Главный файл с алгоритмом согласно заданию \\
+    \hline
+    Data.hpp & Объявление используемых структур данных и функций обработки информации и сохранения данных \\
+    \hline
+    Data.cpp & Реализация функций обработки информации с потока ввода и сохранения данных в поток вывода \\
+    \hline
+    NBC.hpp & Библиотека Наивного байесовского классификатора \\
+    \hline
+    NBC.cpp & Реализация алгоритмов обучения и классификации модели \\
+    \hline
+    train.txt & Корпус для обучения модели \\
+    \hline
+    stats.txt & Промежуточные вычесленные статистических данных для классификации на основе обучающей выборки \\
+    \hline
+    test.txt & Корпус для классификации данных обученной моделью \\
+    \hline
+    predict.txt & Результат классификации тестового корпуса \\
+    \hline
+\end{tabular} \\
+
+\noindent\textbf{Функции и методы} \\
+
+\begin{tabular}{|m{0.58\textwidth}|m{0.4\textwidth}|}
+    \hline
+    Функция & Описание \\
+    \hline\hline
+    const Dataset get\_trainset(std::ifstream\&) & Распарсить поток ввода на датасет обучающей выборки \\
+    \hline
+    const Dataset get\_testset(std::ifstream\&) & Распарсить поток ввода на датасет тестовой выборки \\
+    \hline
+    void save\_stats(std::ofstream\&, const Stats\&) & Вывести собранную статистику в поток вывода \\
+    \hline
+    const Stats load\_stats(std::ifstream\&) & Загрузить статистику из потока ввода \\
+    \hline
+    void save\_feature(std::ofstream\&, const Feature\&) & Вывести фичу в поток вывода \\
+    \hline
+    const std::string clear\_text(const std::string\&) & Очистить текст от лишних символов \\
+    \hline
+    void fill\_tags(std::ifstream\&, Feature\&) & Распарсить теги из потока ввода в фичу \\
+    \hline
+    void fill\_title(std::ifstream\&, Feature\&) & Распарсить заголовок из потока ввода в фичу \\
+    \hline
+    void fill\_text(std::ifstream\&, Feature\&, int) & Распарсить текст из потока ввода в фичу \\
+    \hline
+    NBC::NBC(const Stats\&\&) & Построить модель из статистики \\
+    \hline
+    const Stats\& NBC::get\_stats() const & Получить статистику модели \\
+    \hline
+    void NBC::fit(const Feature\&, const Feature\&) & Обучить модель на множестве признаков и целевой фиче \\
+    \hline
+    template <size\_t SZ> const Feature predict(const std::array<std::reference\_wrapper<const Feature>, SZ>\&) const & Шаблонный метод для классификации данных на основе определённого количества признаков \\
+    \hline
+\end{tabular}
+
+\restoregeometry
+\pagebreak
