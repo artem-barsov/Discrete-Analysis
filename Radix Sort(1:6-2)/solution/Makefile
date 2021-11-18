@@ -6,7 +6,7 @@ OUT = solution
 all: $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(OUT)
 
-main.o: main.cpp Vector.hpp
+main.o: main.cpp Vector.hpp Record.hpp
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
 Record.o: Record.hpp Record.cpp

@@ -16,7 +16,6 @@ struct Stats {
         // W_ic, сколько раз `i`-ое слово встречалось в документах класса `c` в обучающей выборке:
         std::unordered_map<std::string, int> word_count;
     };
-private:
 public:
     // c_, информация о каждом классе:
     std::unordered_map<std::string, _Info> tags_info;
